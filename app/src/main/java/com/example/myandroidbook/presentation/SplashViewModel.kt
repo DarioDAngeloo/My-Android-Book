@@ -1,4 +1,4 @@
-package com.example.myandroidbook.viewmodel
+package com.example.myandroidbook.presentation
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State

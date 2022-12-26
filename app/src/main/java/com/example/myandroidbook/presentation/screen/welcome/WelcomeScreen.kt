@@ -21,7 +21,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.example.myandroidbook.navigation.Screen
 import com.example.myandroidbook.domain.model.OnBoardingPage
-import com.example.myandroidbook.viewmodel.WelcomeViewModel
+import com.example.myandroidbook.presentation.screen.welcome.WelcomeViewModel
 import com.google.accompanist.pager.*
 
 @ExperimentalAnimationApi

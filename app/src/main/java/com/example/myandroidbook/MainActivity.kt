@@ -11,7 +11,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.compose.rememberNavController
 import com.example.myandroidbook.navigation.SetupNavGraph
 import com.example.myandroidbook.ui.theme.MyAndroidBookTheme
-import com.example.myandroidbook.viewmodel.SplashViewModel
+import com.example.myandroidbook.presentation.SplashViewModel
 import com.google.accompanist.pager.ExperimentalPagerApi
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
