@@ -3,10 +3,13 @@ package com.example.myandroidbook.navigation
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.myandroidbook.screen.HomeScreen
-import com.example.myandroidbook.screen.WelcomeScreen
+import androidx.navigation.navArgument
+import com.example.myandroidbook.presentation.screen.HomeScreen
+import com.example.myandroidbook.presentation.screen.WelcomeScreen
+import com.example.myandroidbook.util.Constants.KOTLIN_DETAILS_KEY
 import com.google.accompanist.pager.ExperimentalPagerApi
 
 @ExperimentalAnimationApi
@@ -25,6 +28,17 @@ fun SetupNavGraph(
         }
         composable(route = Screen.Home.route) {
             HomeScreen()
+        }
+        composable(
+            route = Screen.Details.route,
+            arguments = listOf(navArgument(KOTLIN_DETAILS_KEY) {
+                type = NavType.IntType
+            })
+        ) {
+
+        }
+        composable(route = Screen.Search.route) {
+
         }
     }
 }

@@ -12,7 +12,7 @@ import com.example.myandroidbook.domain.model.KotlinRemoteKey
 @TypeConverters(DatabaseConverter::class)
 abstract class KotlinDatabase : RoomDatabase() {
 
-    abstract fun heroDao(): KotlinDao
-    abstract fun heroRemoteKeyDao(): KotlinRemoteDao
+    abstract fun kotlinDao(): KotlinDao
+    abstract fun kotlinRemoteKeyDao(): KotlinRemoteDao
 
 }

@@ -1,7 +1,9 @@
 package com.example.myandroidbook.di
 
 import android.content.Context
-import com.example.myandroidbook.data.DataStoreRepository
+import androidx.room.Room
+import com.example.myandroidbook.data.local.KotlinDatabase
+import com.example.myandroidbook.util.Constants.KOTLIN_DATABASE_TABLE
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,12 +13,16 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object MainModule {
+object DatabaseModule {
 
     @Provides
     @Singleton
-    fun provideDataStoreRepository(
+    fun provideDatabase(
         @ApplicationContext context: Context
-    ) = DataStoreRepository(context = context)
+    ) = Room.databaseBuilder(
+        context,
+        KotlinDatabase::class.java,
+        KOTLIN_DATABASE_TABLE
+    ).build()
 
 }

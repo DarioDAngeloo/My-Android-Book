@@ -4,4 +4,6 @@ object Constants {
     const val KOTLIN_DATABASE_TABLE = "kotlin_database"
     const val KOTLIN_REMOTE_DATABASE_TABLE = "kotlin_remote_database"
 
+    const val KOTLIN_DETAILS_KEY = "kotlinId"
+
 }

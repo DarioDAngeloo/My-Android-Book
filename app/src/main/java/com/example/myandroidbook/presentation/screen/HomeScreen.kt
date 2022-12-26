@@ -1,4 +1,4 @@
-package com.example.myandroidbook.screen
+package com.example.myandroidbook.presentation.screen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
