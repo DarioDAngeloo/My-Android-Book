@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.example.myandroidbook.navigation.Screen
-import com.example.myandroidbook.util.OnBoardingPage
+import com.example.myandroidbook.domain.model.OnBoardingPage
 import com.example.myandroidbook.viewmodel.WelcomeViewModel
 import com.google.accompanist.pager.*
 

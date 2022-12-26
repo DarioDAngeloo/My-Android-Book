@@ -1,4 +1,4 @@
-package com.example.myandroidbook.util
+package com.example.myandroidbook.domain.model
 
 import androidx.annotation.DrawableRes
 import com.example.myandroidbook.R
