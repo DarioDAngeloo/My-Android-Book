@@ -7,7 +7,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.example.myandroidbook.presentation.screen.HomeScreen
+import com.example.myandroidbook.presentation.screen.home.HomeScreen
 import com.example.myandroidbook.presentation.screen.welcome.WelcomeScreen
 import com.example.myandroidbook.util.Constants.KOTLIN_DETAILS_KEY
 import com.google.accompanist.pager.ExperimentalPagerApi
