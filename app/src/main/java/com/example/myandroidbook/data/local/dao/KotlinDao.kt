@@ -12,15 +12,15 @@ import com.example.myandroidbook.domain.model.KotlinModel
 interface KotlinDao {
 
     @Query("SELECT * FROM kotlin_database ORDER BY id ASC")
-    fun getAllHeroes(): PagingSource<Int, KotlinModel>
+    fun getAllKotlinInfo(): PagingSource<Int, KotlinModel>
 
-    @Query("SELECT * FROM kotlin_database WHERE id=:heroId")
-    fun getSelectedHero(heroId: Int): KotlinModel
+    @Query("SELECT * FROM kotlin_database WHERE id=:kotlinId")
+    fun getSelectedKotlinInfo(kotlinId: Int): KotlinModel
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun addHeroes(heroes: List<KotlinModel>)
+    suspend fun addKotlinInfo(koltlinList: List<KotlinModel>)
 
     @Query("DELETE FROM kotlin_database")
-    suspend fun deleteAllHeroes()
+    suspend fun deleteAllKotlinInfo()
 
 }

@@ -2,6 +2,7 @@ package com.example.myandroidbook.di
 
 import android.content.Context
 import androidx.room.Room
+import androidx.room.RoomDatabase
 import com.example.myandroidbook.data.local.KotlinDatabase
 import com.example.myandroidbook.util.Constants.KOTLIN_DATABASE_TABLE
 import dagger.Module
@@ -19,10 +20,11 @@ object DatabaseModule {
     @Singleton
     fun provideDatabase(
         @ApplicationContext context: Context
-    ) = Room.databaseBuilder(
-        context,
-        KotlinDatabase::class.java,
-        KOTLIN_DATABASE_TABLE
-    ).build()
-
+    ): RoomDatabase {
+        return Room.databaseBuilder(
+            context,
+            KotlinDatabase::class.java,
+            KOTLIN_DATABASE_TABLE
+        ).build()
+    }
 }
