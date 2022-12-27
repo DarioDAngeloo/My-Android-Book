@@ -13,7 +13,7 @@ interface KotlinRemoteDao {
     suspend fun getRemoteKey(id: Int): KotlinRemoteKey?
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun addAllRemoteKeys(heroRemoteKeys: List<KotlinRemoteKey>)
+    suspend fun addAllRemoteKeys(kotlinRemoteKeys: List<KotlinRemoteKey>)
 
     @Query("DELETE FROM kotlin_remote_database")
     suspend fun deleteAllRemoteKeys()
