@@ -10,12 +10,12 @@ import javax.inject.Inject
 
 @HiltViewModel
 class WelcomeViewModel @Inject constructor(
-    private val repository: DataStoreRepository
+    private val dataStoreRepository: DataStoreRepository
 ) : ViewModel() {
 
     fun saveOnBoardingState(completed: Boolean) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.saveOnBoardingState(completed = completed)
+            dataStoreRepository.saveOnBoardingState(completed = completed)
         }
     }
 

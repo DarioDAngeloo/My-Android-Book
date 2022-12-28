@@ -1,6 +1,5 @@
 package com.example.myandroidbook.di
 
-import androidx.paging.ExperimentalPagingApi
 import com.example.myandroidbook.data.local.KotlinDatabase
 import com.example.myandroidbook.data.remote.KotlinApi
 import com.example.myandroidbook.data.repository.RemoteDataSourceImpl
@@ -28,8 +27,8 @@ object NetworkModule {
     @Singleton
     fun provideHttpClient() : OkHttpClient {
         return OkHttpClient.Builder()
-            .readTimeout(15, TimeUnit.MINUTES)
-            .connectTimeout(15, TimeUnit.MINUTES)
+            .readTimeout(15, TimeUnit.SECONDS)
+            .connectTimeout(15, TimeUnit.SECONDS)
             .build()
     }
 

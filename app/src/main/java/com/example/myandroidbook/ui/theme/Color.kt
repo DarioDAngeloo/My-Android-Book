@@ -68,4 +68,7 @@ val topIconNight = Color(0xFFB8C8D3)
 val Colors.homeTopIcon
     get() = if (isLight) topIcon else topIconNight
 
+//Star color
+val startColor = Color(0xFFFF9800)
+
 
