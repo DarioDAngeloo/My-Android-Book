@@ -20,7 +20,7 @@ object DatabaseModule {
     @Singleton
     fun provideDatabase(
         @ApplicationContext context: Context
-    ): RoomDatabase {
+    ): KotlinDatabase {
         return Room.databaseBuilder(
             context,
             KotlinDatabase::class.java,

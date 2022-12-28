@@ -1,6 +1,10 @@
 package com.example.myandroidbook.di
 
+import androidx.paging.ExperimentalPagingApi
+import com.example.myandroidbook.data.local.KotlinDatabase
 import com.example.myandroidbook.data.remote.KotlinApi
+import com.example.myandroidbook.data.repository.RemoteDataSourceImpl
+import com.example.myandroidbook.domain.repository.RemoteDataSource
 import com.example.myandroidbook.util.Constants.BASE_URL
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
@@ -46,4 +50,18 @@ object NetworkModule {
     fun provideKotlinApi(retrofit: Retrofit) : KotlinApi {
        return retrofit.create(KotlinApi::class.java)
     }
+
+
+    @Provides
+    @Singleton
+    fun provideRemoteDataSource(
+        kotlinApi: KotlinApi,
+        kotlinDatabase: KotlinDatabase
+    ) : RemoteDataSource {
+        return  RemoteDataSourceImpl(
+            kotlinApi = kotlinApi,
+            kotlinDatabase = kotlinDatabase
+        )
+    }
+
 }
