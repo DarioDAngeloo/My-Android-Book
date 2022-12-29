@@ -1,10 +1,14 @@
 package com.example.myandroidbook.presentation.screen.home
 
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.paging.compose.collectAsLazyPagingItems
+import com.example.myandroidbook.presentation.components.RankingDifficultyWidget
 
 @Composable
 fun HomeScreen(
@@ -16,7 +20,7 @@ fun HomeScreen(
         HomeTopBar(onSearchClicked = {})
 
     }) {
-
+        RankingDifficultyWidget(modifier = Modifier.padding(20.dp), ranking = 4.0)
     }
 }
 
