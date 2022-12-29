@@ -14,7 +14,7 @@ data class KotlinModel (
     val image: String,
     val about: String,
     val tags : List<String>,
-    val ranking: Int,
+    val ranking: Double,
     val yearRelease: Int,
     val difficulty : String
 )
